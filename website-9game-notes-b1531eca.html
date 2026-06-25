@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>九游 · 持续关注 · 产品手记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f6f3;
+            color: #1e1e1e;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.7;
+            font-weight: 350;
+            font-size: 1rem;
+            padding: 0 1.25rem;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2.8rem 0 4rem;
+        }
+
+        /* hero 区域 — 克制叙述 */
+        .hero {
+            margin-bottom: 3.2rem;
+        }
+
+        .hero .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8f8b85;
+            margin-bottom: 0.6rem;
+            border-left: 2px solid #cbab7c;
+            padding-left: 0.75rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 380;
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+            color: #281f1a;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #4f4943;
+            max-width: 32em;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dad3cc;
+            margin: 2rem 0 2.4rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 460;
+            letter-spacing: 0.02em;
+            margin: 2.2rem 0 0.8rem;
+            color: #281f1a;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 420;
+            margin: 1.6rem 0 0.4rem;
+            color: #3b322b;
+        }
+
+        p, li {
+            color: #3f3934;
+        }
+
+        .intro-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin: 1.8rem 0 2rem;
+        }
+
+        .card-item {
+            background: #fffcf9;
+            border-radius: 16px;
+            padding: 1.2rem 1.4rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(95, 75, 55, 0.04);
+        }
+
+        .card-item strong {
+            display: block;
+            font-weight: 470;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: #281f1a;
+        }
+
+        .card-item p {
+            font-size: 0.94rem;
+            margin: 0;
+        }
+
+        .scene-list {
+            list-style: none;
+            margin: 1rem 0 1.8rem;
+        }
+
+        .scene-list li {
+            padding: 0.5rem 0 0.5rem 1.2rem;
+            position: relative;
+            font-size: 0.95rem;
+            border-bottom: 1px dotted #e7dfd9;
+        }
+
+        .scene-list li:last-child {
+            border-bottom: none;
+        }
+
+        .scene-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #b39672;
+            font-weight: bold;
+        }
+
+        .use-note {
+            background: #f1ede8;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem;
+            margin: 2rem 0 2.2rem;
+        }
+
+        .use-note p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .use-note a {
+            color: #7a5e3e;
+            text-decoration: none;
+            border-bottom: 1px solid #c8b7a4;
+            transition: border-color 0.2s;
+        }
+
+        .use-note a:hover {
+            border-bottom-color: #7a5e3e;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd5cd;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 420;
+            cursor: pointer;
+            color: #3b322b;
+            padding: 0.3rem 0;
+            font-size: 0.98rem;
+        }
+
+        .faq-mini details p {
+            margin: 0.3rem 0 0.6rem 1rem;
+            font-size: 0.91rem;
+            color: #5a524b;
+        }
+
+        .signature {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #a3988e;
+            text-align: right;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            .page {
+                padding: 1.8rem 0 3rem;
+            }
+            .card-item {
+                padding: 1rem 1.1rem;
+            }
+            .use-note {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <div class="label">· 再次相遇</div>
+            <h1>九游 · 产品说明</h1>
+            <p>一个我们逐渐熟悉的平台，值得被收藏、被持续留意。本文梳理其定位与使用感受，供你从容判断。</p>
+        </div>
+
+        <hr>
+
+        <!-- 摘要卡片式亮点  -->
+        <h2>亮点速览</h2>
+        <div class="intro-grid">
+            <div class="card-item">
+                <strong>内容聚合</strong>
+                <p>将游戏资讯、社区讨论与实用工具整合在统一界面，减少来回跳转的琐碎感。</p>
+            </div>
+            <div class="card-item">
+                <strong>轻量交互</strong>
+                <p>页面响应速度适中，交互反馈直接，没有过度复杂的层级，适合日常浏览。</p>
+            </div>
+            <div class="card-item">
+                <strong>持续更新</strong>
+                <p>版本迭代可见，近半年保持每月功能优化，产品活跃度稳定。</p>
+            </div>
+        </div>
+
+        <!-- 使用建议 + 访问说明 -->
+        <h2>使用建议</h2>
+        <p>如果你是第一次接触，不妨先浏览首页的信息流，感受内容筛选逻辑。若你已有账号，则可以关注收藏夹与订阅功能——这两个模块的完成度较高，值得频繁使用。</p>
+        <p>我们推荐将其作为辅助工具融入日常，而非唯一的信息源。保持适度使用，才能更客观地评估它是否契合你的习惯。</p>
+
+        <div class="use-note">
+            <p><strong>再次访问 & 收藏</strong> · 如果你觉得值得持续关注，现在就可以将 <a href="https://website-9game.com" target="_blank" rel="noopener noreferrer">九游</a> 添加至浏览器书签或移动端主屏幕。它没有复杂的引导流程，打开即用。</p>
+            <p style="margin-top:0.8rem;">不必刻意安排访问频率，想起来了，或恰好需要时，再点开看看。自然的使用节奏，往往更能看清一个产品的真实面貌。</p>
+        </div>
+
+        <!-- 使用场景（叙述式） -->
+        <h2>典型场景</h2>
+        <ul class="scene-list">
+            <li>午休或通勤时，刷一下信息流，了解近期热门游戏动向。</li>
+            <li>与朋友聊到某款游戏，直接检索相关评测与玩家讨论。</li>
+            <li>整理自己的游戏库，用平台内建标记功能记录游玩状态。</li>
+            <li>偶尔回看收藏夹内容，发现之前忽略的更新或活动。</li>
+        </ul>
+
+        <!-- FAQ 摘要 — 真实、克制 -->
+        <div class="faq-mini">
+            <h2 style="margin-top:0;">常见疑问摘要</h2>
+            <details>
+                <summary>九游需要注册才能使用吗？</summary>
+                <p>浏览首页和部分内容无需登录；注册后可解锁收藏、发言等功能，注册流程约1分钟。</p>
+            </details>
+            <details>
+                <summary>移动端体验如何？</summary>
+                <p>响应式适配良好，在手机浏览器上阅读、点击区域都经过调整，没有明显缩放问题。</p>
+            </details>
+            <details>
+                <summary>内容来源是否可靠？</summary>
+                <p>平台内容主要来自合作媒体与用户社区，建议对社区生成内容保持自行核实习惯。</p>
+            </details>
+            <details>
+                <summary>是否收费？</summary>
+                <p>基础浏览和社区功能免费，未发现强制付费入口。具体增值服务请以产品内说明为准。</p>
+            </details>
+        </div>
+
+        <div class="signature">
+            — 产品手记 · 持续关注中
+        </div>
+    </div>
+</body>
+</html>
